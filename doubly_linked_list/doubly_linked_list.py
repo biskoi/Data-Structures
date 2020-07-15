@@ -124,8 +124,8 @@ class DoublyLinkedList:
         # while current is not node:
         #     current = current.next
         # current.delete()
-        self.delete(node)
-        self.add_to_head(node.value)
+        self.delete(node) #O(1)
+        self.add_to_head(node.value) #O(1)
         
     """
     Removes the input node from its current spot in the 
@@ -154,7 +154,7 @@ class DoublyLinkedList:
     Deletes the input node from the List, preserving the 
     order of the other elements of the List.
     """
-    def delete(self, node):
+    def delete(self, node): # O(1)
         if node == self.head:
             self.remove_from_head()
         elif node == self.tail:
